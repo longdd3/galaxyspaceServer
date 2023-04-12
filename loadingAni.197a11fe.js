@@ -6130,5 +6130,5 @@ window.onload = setInterval(function (e) {
     display: "none",
     opacity: 0
   }, "start+=0.8");
-}, 3000);
+}, 7000);
 },{"splitting":"Ko7r","gsap":"f8Z0"}]},{},["lhjB"], null)
