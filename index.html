@@ -3,12 +3,103 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<style>*{margin:0;padding:0} 
+	<link rel="stylesheet" href="splitting-cells.8a5811b0.css">
+	<link rel="stylesheet" href="splitting.151bcfa9.css">
+	<style>@font-face {
+    font-family: serpents;
+    src: url("serpent-webfont.13e60af1.woff");
+  }
+  .no-loading {
+    display: none;
+    visibility: hidden;
+ 
+ }
+  
+
+		*{margin:0;padding:0} 
 		canvas{display: block}
-		#container{width: 100vw;height: 100vh}</style>
+		#container{width: 100vw;height: 100vh}
+		
+		.content-loader {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    position: relative;
+    padding: 1.5rem 0rem;;
+}
+.loading-scene {
+    opacity: 1;
+    position: fixed;
+    overflow: hidden;
+    
+    color: #f2e9e4;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #131322;
+    z-index: 5001;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+ 
+}
+.loading-screen--hide {
+    transition: opacity 1.8s cubic-bezier(.32,.94,.6,1); 
+
+    opacity: 0;
+    pointer-events: none;
+}
+.hideMyScroll {
+    overflow: hidden;
+    }
+
+.no-ld {
+    display: none;
+}
+.items {
+    position: absolute;
+    left: 45%;
+    
+}
+.content__title {
+    font-family: serpents;
+	font-size: 2vw;
+	line-height: 0.8;
+	counter-increment: section;
+	text-align: center;
+	display: grid;
+	gap: 2rem;
+}
+.content__title::before {
+    display: block;
+    margin-bottom: 10vh;
+    text-align: center;
+}
+.char-wrap {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}</style>
 </head>
-<body>
+<body class="hideMyScroll">
+	<div class="loading-scene no-stuff" id="loading-scene"> 
+		<div class="content-loader">
+	 
+		 
+				<h2 class="content__title" data-splitting="" data-effect="">
+					<span class="f-xl  font-height">mia642
+					</span>
+				 
+				</h2>
+			 
+		</div>
+ 
+	</div>
 	<div id="container"></div>
+	<script src="loadingAni.197a11fe.js"></script>
+ 
 	<script src="app.9ded0982.js"></script>
 </body>
 </html>
